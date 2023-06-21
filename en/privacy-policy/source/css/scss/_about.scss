@@ -1,0 +1,249 @@
+.about {
+    opacity: 0;
+    transition: opacity 2s;
+    .section-title {
+        @media (min-width: 1500px) {
+            width: 700px;
+        }
+    }
+    .about-container {
+        .about-container-top {
+            @media (min-width: 1500px) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .about-image {
+                position: relative;
+                @media (min-width: 1500px) {
+                    width: 40%;
+                }
+                img {
+                    width: 100%;
+                    &:nth-child(2) {
+                        display: none;
+                        @media (min-width: 1500px) {
+                            display: block;
+                            position: absolute;
+                            left: -220px;
+                            bottom: -80px;
+                            width: 500px;
+                            z-index: -1;
+                        }
+                    }
+                    &:nth-child(3) {
+                        display: none;
+                    }
+                }
+            }
+            .about-information {
+                margin-top: 34px;
+                @media (min-width: 1500px) {
+                    width: 46%;
+                    margin-top: 0px;
+                    font-size: $font-size18;
+                }
+                .about-information-title {
+                    font-size: $font-size22;
+                    font-weight: $font-w800;
+                    line-height: 28px;
+                    margin-bottom: 14px;
+                    @media (min-width: 1500px) {
+                        font-size: $font-size32;
+                        margin-bottom: 30px;
+                    }
+                }
+                .about-information-text {
+                    font-weight: $font-w500;
+                }
+                .about-skills {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    margin-top: 34px;
+                    @media (min-width: 1500px) {
+                        justify-content: start;
+                        gap: 20px;
+                    }
+                    .about-skills-box {
+                        background: $color-light-grey;
+                        width: 150px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 16px 30px;
+                        border-radius: $radius10;
+                        margin-bottom: 16px;
+                        span {
+                            font-weight: $font-w600;
+                        }
+                    }
+                }
+                .about-stats {
+                    background: $color-light-grey;
+                    border-radius: $radius10;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 40px 0px;
+                    @media (min-width: 1500px) {
+                        flex-direction: row;
+                        justify-content: space-between;
+                        padding: 40px;
+                        margin-top: 20px;
+                    }
+                    .about-stats-box {
+                        text-align: center;
+                        margin-bottom: 30px;
+                        font-size: $font-size16;
+                        @media (min-width: 1500px) {
+                            margin-bottom: 0px;
+                            font-size: $font-size18;
+                        }
+                        &:nth-last-child(1) {
+                            margin-bottom: 0px;
+                        }
+                        span {
+                            color: $color-main400;
+                            font-weight: $font-w800;
+                            font-size: $font-size20;
+                        }
+                        p {
+                            font-weight: $font-w500;
+                        }
+                    }
+                }
+            }
+        }
+        .about-container-bottom {
+            margin-top: 40px;
+            @media (min-width: 1500px) {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 100px;
+            }
+            .about-container-bottom-info {
+                @media (min-width: 1500px) {
+                    width: 46%;
+                    margin-top: 60px;
+                }
+                .about-information-title {
+                    font-size: $font-size22;
+                    font-weight: $font-w800;
+                    line-height: 28px;
+                    margin-bottom: 14px;
+                    @media (min-width: 1500px) {
+                        font-size: $font-size32;
+                        line-height: 40px;
+                        margin-bottom: 30px;
+                    }
+                }
+                .about-information-text {
+                    font-weight: $font-w500;
+                    @media (min-width: 1500px) {
+                        font-size: $font-size18;
+                    }
+                }
+                .about-container-advantages {
+                    @media (min-width: 1500px) {
+                        margin-top: 60px;
+                    }
+                    .about-advantages-box {
+                        background: $color-main200;
+                        border-radius: $radius10;
+                        padding: 20px;
+                        margin: 20px 0px;
+                        @media (min-width: 1500px) {
+                            display: flex;
+                            align-items: center;
+                            margin: 40px 0px;
+                        }
+                        .about-advantages-icon {
+                            background: $color-main400;
+                            width: 50px;
+                            height: 50px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: $radius10;
+                            margin-bottom: 10px;
+                            @media (min-width: 1500px) {
+                                margin-bottom: 0px;
+                                margin-right: 20px;
+                            }
+                        }
+                        .about-advantages-text {
+                            font-weight: $font-w700;
+                            @media (min-width: 1500px) {
+                                font-size: $font-size18;
+                            }
+                        }
+                    }
+                }
+            }
+            .about-container-bottom-image {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                margin-top: 40px;
+                @media (min-width: 1500px) {
+                    width: 40%;
+                    margin-top: 0px;
+                }
+                .about-code-img {
+                    width: 320px;
+                    @media (min-width: 1500px) {
+                        width: 100%;
+                    }
+                }
+                .about-line-img {
+                    display: none;
+                    @media (min-width: 1500px) {
+                        display: block;
+                        position: absolute;
+                        z-index: -1;
+                    }
+                }
+                .about-container-img-text {
+                    position: absolute;
+                    bottom: -100px;
+                    background: $color-white;
+                    width: 300px;
+                    margin: 0px auto;
+                    padding: 20px;
+                    border-radius: $radius10;
+                    box-shadow: 0px 0px 20px rgba(70,70,70,0.24);
+                    @media (min-width: 1500px) {
+                        width: 500px;
+                        left: -60px;
+                        bottom: -60px;
+                    }
+                    .about-img-text-title {
+                        .about-img-text-icon {
+                            width: 50px;
+                            height: 50px;
+                            background: $color-main300;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: $radius10;
+                            margin-bottom: 10px;
+                        }
+                        .about-img-text-title-value {
+                            font-weight: $font-w700;
+                            font-size: $font-size18;
+                            margin-bottom: 10px;
+                        }
+                    }
+                    p {
+                        color: $color-text-light;
+                        font-weight: $font-w500;
+                        font-size: $font-size18;
+                    }
+                }
+            }
+        }
+    }
+}

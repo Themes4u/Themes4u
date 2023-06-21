@@ -1,0 +1,61 @@
+.services {
+    opacity: 0;
+    transition: opacity 2s;
+    .section-title {
+       margin: 200px 0px 40px  0px;
+       @media (min-width: 1500px) {
+        width: 900px;
+       }
+    }
+    .services-container {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        &:hover {
+            cursor: pointer;
+        }
+        @media (min-width: 1500px) {
+            justify-content: space-between;
+        }
+        .services-box {
+            padding: 40px 20px;
+            background: $color-main200;
+            border-radius: 10px;
+            min-width: 290px;
+            scroll-snap-align: start;
+            @media (min-width: 1500px) {
+                width: 500px;
+            }
+            .services-box-title {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                .services-box-title-icon {
+                    width: 50px;
+                    height: 50px;
+                    background: $color-main300;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: $radius10;
+                }
+                .services-box-title-text {
+                    font-weight: $font-w700;
+                    margin-left: 10px;
+                    @media (min-width: 1500px) {
+                        font-size: $font-size18;
+                    }
+                }
+            }
+            .services-box-text {
+                font-weight: $font-w500;
+                color: $color-text-light;
+                @media (min-width: 1500px) {
+                    font-size: $font-size18;
+                }
+            }
+        }
+    }
+}

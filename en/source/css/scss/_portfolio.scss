@@ -1,0 +1,116 @@
+.portfolio-section {
+    opacity: 0;
+    transition: opacity 2s;
+    .section-title {
+        @media (min-width: 1500px) {
+            width: 600px;
+        }
+    }
+    .portfolio-container {
+      .portfolio-tab {
+        margin-bottom: 40px;
+        .portfolio-tab-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          .filter {
+            background: $color-main200;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            border-radius: $radius10;
+            text-transform: uppercase;
+            font-weight: $font-w500;
+            &.active {
+                background: $color-main400;
+                color: $color-white;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+          }
+        }
+      }
+      .portfolio-grid {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .portfolio {
+            display: none;
+            overflow: hidden;
+            margin-bottom: 40px;
+            @media (min-width: 1500px) {
+                margin-bottom: 0px;
+            }
+            &:nth-last-child(1) {
+                margin-bottom: 40px;
+                @media (min-width: 1240px) {
+                    margin-bottom: 0px;
+                }
+            }
+            &:hover {
+                cursor: pointer;
+                .portfolio-wrapper {
+                    .portfolio-bg {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+            .portfolio-wrapper {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 40px;
+                .portfolio-bg {
+                    min-width: 320px;
+                    max-width: 320px;
+                    height: 300px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    transition: 1s;
+                    transform: scale(1);
+                    border-radius: $radius10;
+                    @media (min-width: 500px) {
+                        min-width: 460px;
+                    }
+                }
+            }
+        }
+        .first {
+            .portfolio-bg {
+                background-image: url('/images/truckzen.svg');
+            }
+        }
+        .second {
+            .portfolio-bg {
+                background-image: url('/images/themes4u.svg');
+            }
+        }
+        .third {
+            .portfolio-bg {
+                background-image: url('/images/redlyvision.svg');
+            }
+        }
+        .four {
+            .portfolio-bg {
+                background-image: url('/images/adamrydzapl.svg');
+            }
+        }
+        .five {
+            .portfolio-bg {
+                background-image: url('/images/mobilefitnessapp.svg');
+            }
+        }
+        .six {
+            .portfolio-bg {
+                background-image: url('/images/popptheme.svg');
+            }
+        }
+        .seven {
+            .portfolio-bg {
+                background-image: url('/images/filmoz.svg');
+            }
+        }
+      }
+    }
+  }

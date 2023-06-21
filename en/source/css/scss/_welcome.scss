@@ -1,0 +1,188 @@
+.welcome {
+    margin-top: 40px;
+    @media (min-width: 1240px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .welcome-text {
+        @media (min-width: 1240px) {
+            width: 40%;
+        }
+        @media (min-width: 1500px) {
+            width: 44%;
+        }
+        h1 {
+            font-size: $font-size36;
+            font-weight: $font-w900;
+            line-height: 50px;
+            @media (min-width: 1240px) {
+                font-size: $font-size52;
+                line-height: 80px;
+            }
+            @media (min-width: 1500px) {
+                font-size: $font-size64;
+                line-height: 90px;
+            }
+            .welcome-text-background {
+                background: $color-main300;
+                padding: 0px 10px;
+            }
+            .welcome-text-color {
+                color: $color-main400;
+            }
+        }
+        .welcome-customers {
+            margin-top: 40px;
+            .welcome-customers-happy {
+                display: flex;
+                flex-direction: column;
+                @media (min-width: 768px) {
+                    flex-direction: row;
+                }
+                .happy-customers-img {
+                    margin-right: 20px;
+                    width: 140px;
+                }
+                .welcome-customers-happy-box {
+                    margin: 10px 10px 0px 10px;
+                    @media (min-width: 768px) {
+                        display: flex;
+                        align-items: center;
+                        margin: 0px;
+                    }
+                    .welcome-customers-happy-text {
+                        font-weight: $font-w500;
+                        font-size: $font-size18;
+                        display: flex;
+                        flex-direction: column;
+                        padding-bottom: 10px;
+                        @media (min-width: 768px) {
+                            padding-right: 30px;
+                            padding-bottom: 0px;
+                        }
+                        @media (min-width: 1500px) {
+                            padding-right: 50px;
+                        }
+                        span {
+                            &:nth-child(1) {
+                                font-size: $font-size22;
+                                font-weight: $font-w800;
+                            }
+                        }
+                    }
+                    .welcome-customers-rate {
+                        display: flex;
+                        flex-direction: column;
+                        border-top: 1px solid $color-grey;
+                        padding-top: 10px;
+                        @media (min-width: 768px) {
+                            border-top: 0;
+                            border-left: 1px solid $color-grey;
+                            padding-left: 30px;
+                            padding-top: 0;
+                        }
+                        @media (min-width: 1500px) {
+                            border-left: 3px solid $color-grey;
+                            padding-left: 50px;
+                        }
+                        .average-rating-text {
+                            font-weight: $font-w500;
+                            font-size: $font-size18;
+                        }
+                        .rate-star {
+                            display: flex;
+                            img {
+                                margin-right: 6px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .welcome-instagram {
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            .welcome-instagram-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 10px;
+                @media (min-width: 1500px) {
+                    width: 40px;
+                    height: 40px;
+                    background: $color-white;
+                    border-radius: $radius10;
+                }
+            }
+            p {
+                font-size: $font-size18;
+                line-height: 24px;
+                span {
+                    font-weight: $font-w500;
+                }
+                a {
+                    color: $color-main400;
+                    font-weight: $font-w700;
+                }
+            }
+        }
+        .welcome-button {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            @media (min-width: 768px) {
+                flex-direction: row;
+                gap: 20px;
+            }
+            a {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @media (min-width: 768px) {
+                    width: 300px;
+                }
+                @media (min-width: 1500px) {
+                    width: 260px;
+                }
+                &:nth-child(1) {
+                    background: $color-main400;
+                    color: $color-white;
+                    border-radius: $radius10;
+                    padding: 22px 40px;
+                    font-size: $font-size18;
+                    font-weight: $font-w600;
+                    margin-bottom: 20px;
+                    @media (min-width: 768px) {
+                        margin-bottom: 0px;
+                    }
+                }
+                &:nth-child(2) {
+                    background: $color-main300;
+                    color: $color-main400;
+                    border-radius: $radius10;
+                    padding: 22px 40px;
+                    font-size: $font-size18;
+                    font-weight: $font-w600;
+                }
+                img {
+                    width: 30px;
+                }
+            }
+        }
+    }
+    .welcome-image {
+        margin-top: 40px;
+        @media (min-width: 1240px) {
+            width: 46%;
+            margin-top: 0px;
+            display: flex;
+        }
+        img {
+            width: 100%;
+            box-shadow: 30px 30px 56px rgba(70,70,70,0.16);
+            border-radius: $radius10;
+        }
+    }
+}

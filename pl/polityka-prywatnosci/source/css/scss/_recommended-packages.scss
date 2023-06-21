@@ -1,0 +1,103 @@
+.recommended-packages {
+    opacity: 0;
+    transition: opacity 2s;
+    .section-title {
+        @media (min-width: 1500px) {
+            width: 1200px;
+        }
+    }
+    .recommended-container {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        @media (min-width: 1500px) {
+            justify-content: space-between;
+        }
+        .recommended-box {
+            background: $color-main200;
+            border-radius: $radius10;
+            padding: 40px 20px;
+            width: 320px;
+            scroll-snap-align: start;
+            &:hover {
+                cursor: pointer;
+            }
+            @media (min-width: 1500px) {
+                width: 480px;
+            }
+            .recommended-box-title {
+                text-align: center;
+                .recommended-name {
+                    background: $color-main300;
+                    padding: 14px;
+                    width: 160px;
+                    border-radius: $radius10;
+                    margin: 0px auto 20px auto;
+                    color: $color-main400;
+                    font-weight: $font-w700;
+                    font-size: $font-size14;
+                }
+                h3 {
+                    font-size: $font-size26;
+                    font-weight: $font-w900;
+                }
+                .recommended-under-line {
+                    width: 80px;
+                    height: 4px;
+                    border-radius: $radius10;
+                    background: $color-main400;
+                    margin: 20px auto;
+                }
+            }
+            .recommended-perfect {
+                text-align: center;
+                .recommended-perfect-text {
+                    margin: 30px 0px 10px 0px;
+                    font-weight: $font-w500;
+                    span {
+                        color: $color-main400;
+                        font-weight: $font-w700;
+                        margin-right: 6px;
+                    }
+                }
+            }
+            .recommended-packages-have {
+                margin-top: 30px;
+                .packages-have-title {
+                    margin-bottom: 10px;
+                }
+                .packages-have-list {
+                    display: flex;
+                    flex-direction: column;
+                    .packages-have-list-item {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        &:nth-last-child(1) {
+                            margin-bottom: 0px;
+                        }
+                        img {
+                            margin-right: 10px;
+                        }
+                        span {
+                            font-weight: $font-w500;
+                        }
+                    }
+                }
+            }
+            .packages-price {
+                margin-top: 60px;
+                text-align: right;
+                .packages-price-title {
+                    color: $color-text-light;
+                    span {
+                        color: $color-main400;
+                        font-size: $font-size28;
+                    }
+                }
+            }
+        }
+    }
+}

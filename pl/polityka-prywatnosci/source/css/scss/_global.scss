@@ -1,0 +1,96 @@
+//** :: RESET
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+//** :: SCROLLBAR STYLE {
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 4px;
+  }
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $color-main400;
+    border-radius: $radius10;
+}
+
+//** :: BODY STYLE
+body {
+    font-family: $poppins;
+    color: $color-text;
+    background-image: url('/images/background.svg');
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+//** :: LINK STYLE
+a {
+    text-decoration: none;
+}
+
+//** :: LIST STYLE
+li {
+    list-style: none;
+}
+
+
+//** ::  NAVBAR OPEN
+
+.nav-open {
+    display: block !important;
+}
+
+//** :: MAIN STYLE
+main {
+    width: 320px;
+    margin: 0px auto;
+    @media (min-width: 500px) {
+        width: 460px;
+    }
+    @media (min-width: 768px) {
+        width: 728px;
+    }
+    @media (min-width: 1240px) {
+        width: 1200px;
+    }
+    @media (min-width: 1500px) {
+        width: 1500px;
+    }
+}
+
+//** :: SECTION TITLE STYLE
+.section-title {
+    margin: 100px 0px 40px  0px;
+    @media (min-width: 1500px) {
+        margin: 200px 0px 60px 0px;
+    }
+    span {
+        font-size: $font-size20;
+        color: $color-main400;
+        font-weight: $font-w800;
+        @media (min-width: 1500px) {
+            font-size: $font-size24;
+        }
+    }
+    h2 {
+        font-size: $font-size38;
+        font-weight: $font-w800;
+        line-height: 48px;
+        @media (min-width: 1500px) {
+            font-size: $font-size58;
+            line-height: 70px;
+            margin-top: 10px;
+        }
+    }
+}
