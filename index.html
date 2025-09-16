@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invoice Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <script defer src="./app.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-YcsIPG9G8vA4N7bq8sJ1xk6+eY7v8o7k9N3dJv7qQmQ2K2vN3LA1Z9oG2+ZkYp0cZCjH3qQnUuH1v9zC1ZfK6w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <header class="app-header">
+    <div class="container header-inner">
+      <h1 class="app-title">Invoice Generator</h1>
+      <button id="exportPdfBtn" class="btn btn-primary">Export to PDF</button>
+    </div>
+  </header>
+
+  <main class="container app-main">
+    <aside class="sidebar card">
+      <form id="invoiceForm" class="form">
+        <section class="form-section">
+          <h2 class="section-title">Seller Details</h2>
+          <div class="field-grid">
+            <label class="field">
+              <span class="label">Company name</span>
+              <input type="text" class="input" data-bind="seller.companyName" placeholder="Acme Sp. z o.o." />
+            </label>
+            <label class="field">
+              <span class="label">Address</span>
+              <input type="text" class="input" data-bind="seller.address" placeholder="ul. Przykładowa 1, 00-000 Warszawa" />
+            </label>
+            <label class="field">
+              <span class="label">Tax ID</span>
+              <input type="text" class="input" data-bind="seller.taxId" placeholder="NIP 000-000-00-00" />
+            </label>
+            <label class="field">
+              <span class="label">Phone</span>
+              <input type="tel" class="input" data-bind="seller.phone" placeholder="+48 600 000 000" />
+            </label>
+            <label class="field">
+              <span class="label">Email</span>
+              <input type="email" class="input" data-bind="seller.email" placeholder="biuro@acme.pl" />
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2 class="section-title">Client Details</h2>
+          <div class="field-grid">
+            <label class="field">
+              <span class="label">Company name</span>
+              <input type="text" class="input" data-bind="client.companyName" placeholder="Klient S.A." />
+            </label>
+            <label class="field">
+              <span class="label">Address</span>
+              <input type="text" class="input" data-bind="client.address" placeholder="ul. Klienta 10, 00-000 Kraków" />
+            </label>
+            <label class="field">
+              <span class="label">Tax ID</span>
+              <input type="text" class="input" data-bind="client.taxId" placeholder="NIP 111-111-11-11" />
+            </label>
+            <label class="field">
+              <span class="label">Phone</span>
+              <input type="tel" class="input" data-bind="client.phone" placeholder="+48 700 000 000" />
+            </label>
+            <label class="field">
+              <span class="label">Email</span>
+              <input type="email" class="input" data-bind="client.email" placeholder="kontakt@klient.pl" />
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2 class="section-title">Invoice Details</h2>
+          <div class="field-grid field-grid-3">
+            <label class="field">
+              <span class="label">Invoice number</span>
+              <input type="text" class="input" data-bind="meta.invoiceNumber" placeholder="FV/2025/001" />
+            </label>
+            <label class="field">
+              <span class="label">Issue date</span>
+              <input type="date" class="input" data-bind="meta.issueDate" />
+            </label>
+            <label class="field">
+              <span class="label">Due date</span>
+              <input type="date" class="input" data-bind="meta.dueDate" />
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <div class="section-title-row">
+            <h2 class="section-title">Items</h2>
+            <button type="button" id="addItemBtn" class="btn btn-secondary">Add Item</button>
+          </div>
+          <div id="itemsFormList" class="items-form-list"></div>
+        </section>
+
+        <section class="form-section">
+          <h2 class="section-title">Additional Notes</h2>
+          <label class="field">
+            <textarea class="input textarea" rows="4" data-bind="notes" placeholder="Payment within 14 days. Thank you for your business."></textarea>
+          </label>
+        </section>
+      </form>
+    </aside>
+
+    <section class="preview-wrapper">
+      <div id="invoicePreview" class="invoice-a4 card"></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <div class="container">
+      <span class="muted">Built with ❤️ for the browser</span>
+    </div>
+  </footer>
+</body>
+<!-- The app is fully client-side. -->
+</html>
+
